@@ -13,10 +13,9 @@ def action_on_db(param):
 def copy_csv_to_db(file_name):
     if file_name == "clean_stations.csv":
         ins = stations.insert()
-        ins.compile().params
     else:
         ins = measures.insert()
-        ins.compile().params
+    ins.compile().params
 
     with open(file_name) as csv_file:
         reader = csv.reader(csv_file)
